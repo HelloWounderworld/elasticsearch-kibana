@@ -2,6 +2,46 @@
 This repository is to understand about elastic search and how to use Docker compose to use Kibana!
 
 ## Using Elastic Search installing by pip:
+Para usar a biblioteca elasticsearch do Python, é necessário que o Elasticsearch esteja instalado e em execução em um servidor, seja localmente ou em um servidor remoto. Aqui estão os pontos principais:
+
+- 1. O que é o Elasticsearch?
+O Elasticsearch é um mecanismo de busca e análise de dados distribuído e em tempo real. Para interagir com ele através do Python, você precisa ter uma instância do Elasticsearch ativa.
+
+- 2. Instalação do Elasticsearch
+Se você ainda não instalou o Elasticsearch, você pode fazê-lo seguindo as instruções da documentação oficial. Aqui estão algumas opções comuns:
+
+    - Linux: Você pode usar pacotes .deb ou .rpm.
+    - Docker: Usar uma imagem do Elasticsearch.
+    - Windows: Baixar e instalar o Elasticsearch como um serviço.
+
+- 3. Iniciar o Elasticsearch
+Após a instalação, você precisa iniciar o serviço. Dependendo do método de instalação, isso pode ser feito com:
+
+    - Linux: If you have elasticsearch insataled localy
+        
+            sudo service elasticsearch start
+
+    - Docker: If you can access elastic search remotly
+
+            docker run -d -p 9200:9200 --name elasticsearch elasticsearch:7.10.0
+
+- 4. Verificar se o Elasticsearch está em Execução
+
+    Depois de iniciar o Elasticsearch, verifique se ele está funcionando corretamente acessando:
+
+        curl -X GET "http://localhost:9200/"
+
+    Você deve receber uma resposta JSON com informações sobre o cluster.
+
+- 5. Conectar-se ao Elasticsearch com Python
+
+    Uma vez que o Elasticsearch esteja em execução, você pode usar a biblioteca elasticsearch do Python para interagir com ele, como no exemplo anterior.
+
+### Resumo
+Sim, você precisa de uma instância do Elasticsearch em execução para usar a biblioteca elasticsearch do Python.
+Instale e inicie o Elasticsearch antes de tentar indexar ou consultar dados.
+
+### Step by step
 Create a virtual enviromment going in your directory
 
     python -m venv name_project or python3 -m venv name_project
