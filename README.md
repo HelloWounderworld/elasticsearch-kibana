@@ -106,3 +106,23 @@ If was returned any json that show data that you saved, then this it mens is wor
 After installation, you can see the documentation of kibana to learn how to use
 
     https://www.elastic.co/guide/en/kibana/7.9/index.html
+
+ Limpar os Dados do Elasticsearch
+Se você não precisa dos dados existentes e pode começar do zero, você pode limpar o volume de dados que está sendo usado pelo Elasticsearch. Para fazer isso:
+
+Pare os contêineres:
+
+Copiar
+docker-compose down
+Remova o volume que contém os dados do Elasticsearch. Você pode fazer isso com o seguinte comando:
+
+Copiar
+docker volume rm <nome_do_volume>
+No seu caso, o volume é chamado esdata, então você pode usar:
+
+Copiar
+docker volume rm elasticsearch-kibana_esdata
+Inicie novamente os contêineres:
+
+Copiar
+docker-compose up

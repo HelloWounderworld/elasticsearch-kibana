@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
 
 # Conectar ao Elasticsearch
-es = Elasticsearch([{'scheme': 'http', 'host': 'localhost', 'port': 9200}])
+es = Elasticsearch([{'scheme': 'http', 'host': 'localhost', 'port': 9200}], headers={'Content-Type': 'application/json'})
 
 # Verificar se a conexão está funcionando
 if es.ping():
@@ -15,6 +15,8 @@ doc = {
     'text': 'Elasticsearch é incrível!',
     'timestamp': '2024-09-01T00:00:00'
 }
+
+# Indexar o documento
 res = es.index(index='test-index', id=1, body=doc)
 print(res['result'])
 
