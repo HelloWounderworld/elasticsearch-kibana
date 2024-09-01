@@ -22,6 +22,22 @@ To check if your package was installed using the following command
 
     pip list
 
+Now, you have to configure the port to the localhost
+
+    python3 -m http.server 8000
+
+Or just run the file
+
+    python3 server.py
+
+Save some data to the elastic search activating python script
+
+    python3 teste_elasticsearch.py
+
+Check using curl if the data was saved
+
+    curl -X GET "http://localhost:9200/test-index/_doc/1"
+
 When you finish your job, you can off your virtual enviromment using the following command
 
     deactivate

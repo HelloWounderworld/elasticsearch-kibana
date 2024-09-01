@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
 
 # Conectar ao Elasticsearch
-es = Elasticsearch([{'scheme': 'http', 'host': '172.20.219.227', 'port': 9200}])
+es = Elasticsearch([{'scheme': 'http', 'host': 'localhost', 'port': 9200}])
 
 # Verificar se a conexão está funcionando
 if es.ping():
