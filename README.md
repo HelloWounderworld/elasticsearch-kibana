@@ -126,3 +126,7 @@ Inicie novamente os contêineres:
 
 Copiar
 docker-compose up
+
+# More like this query
+
+    git@github.com:HelloWounderworld/elasticsearch-kibana.git
