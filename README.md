@@ -134,3 +134,7 @@ docker-compose up
 ## D3 gallery
 
     https://observablehq.com/@d3/gallery
+
+## More complete Elasticsearch and Kibana
+
+    https://github.com/sherifabdlnaby/elastdocker/blob/main/docker-compose.yml
