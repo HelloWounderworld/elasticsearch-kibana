@@ -1,6 +1,12 @@
 # Elastic Search - Kibana
 This repository is to understand about elastic search and how to use Docker compose to use Kibana!
 
+    https://www.elastic.co/docs
+
+    https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html
+
+    https://www.elastic.co/pt/kibana
+
 ## Using Elastic Search installing by pip:
 Para usar a biblioteca elasticsearch do Python, é necessário que o Elasticsearch esteja instalado e em execução em um servidor, seja localmente ou em um servidor remoto. Aqui estão os pontos principais:
 
