@@ -1,0 +1,28 @@
+version: '3.5'
+
+networks:
+  default:
+    name: elastic
+    external: false
+
+volumes:
+  elasticsearch-data:
+  elasticsearch-backup:
+
+secrets:
+  elasticsearch.keystore:
+    file: ./secrets/keystore/elasticsearch.keystore
+  elastic.ca:
+    file: ./secrets/verts/ca/ca.crt
+  elasticsearch.certificates:
+    file: ./secrets/certs/elasticsearch/elasticsearch.crt
+  elasticsearch.key:
+    file: ./secrets/certs/elasticsearch/elasticsearch.key
+  kibana.certificate:
+    file: ./secrets/certs/kibana/kibana.crt
+  kibana.key:
+    file: ./secrets/certs/kibana/kibana.key
+
+services:
+  elasticsearch:
+    image: elasticsearch:elastdocker-${ELK_VERSION}

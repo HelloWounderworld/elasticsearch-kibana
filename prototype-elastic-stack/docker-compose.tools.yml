@@ -1,0 +1,25 @@
+# Docker Compose configuration for the Alerting with ELK and Elastalert article.
+# By Ivan Krizsan.
+version: "3"
+services:
+    # Elastalert instance.
+    # Docker image available from Docker Hub.
+    elastalert:
+        image: ivankrizsan/elastalert:latest
+        depends_on:
+            - elasticsearch
+            - kibana
+        cap_add:
+            - SYS_TIME
+            - SYS_NICE
+        volumes:
+            - ./ElastalertShared/logs:/opt/logs
+            - ./ElastalertShared/rules:/opt/rules
+            - ./ElastalertShared/config:/opt/config
+        links:
+            - elasticsearch:elasticsearchhost
+        environment:
+            - ELASTICSEARCH_USER=elastic
+            - ELASTICSEARCH_PASSWORD=changeme
+            - SET_CONTAINER_TIMEZONE=true
+            - CONTAINER_TIMEZONE=Asia/Taipei

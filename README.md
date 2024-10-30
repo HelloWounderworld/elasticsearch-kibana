@@ -3,9 +3,31 @@ This repository is to understand about elastic search and how to use Docker comp
 
     https://www.elastic.co/docs
 
+    https://github.com/elastic/elasticsearch/tree/8.15
+
     https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html
 
     https://www.elastic.co/pt/kibana
+
+Build docker compose main elastic search
+
+    https://github.com/elastic/elasticsearch/blob/8.15/docs/reference/setup/install/docker/docker-compose.yml
+
+    https://www.elastic.co/guide/en/elasticsearch/reference/8.15/docker.html
+
+Elastalert
+
+    https://github.com/Karql/elastalert2-server
+
+Kibana
+
+    https://github.com/Karql/elastalert-kibana-plugin/issues/1
+
+Keystore and certs
+
+    https://github.com/deviantony/docker-elk/issues/579
+    
+    https://github.com/elastic/elasticsearch/blob/8.15/docs/reference/setup/install/docker/.env
 
 ## Using Elastic Search installing by pip:
 Para usar a biblioteca elasticsearch do Python, é necessário que o Elasticsearch esteja instalado e em execução em um servidor, seja localmente ou em um servidor remoto. Aqui estão os pontos principais:
